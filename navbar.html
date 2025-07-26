@@ -1,4 +1,60 @@
 <nav class="navbar">
+  <style>
+    .navbar {
+      background-color: var(--bg-card);
+      border-bottom: 2px solid var(--accent);
+      padding: 1rem;
+      text-align: center;
+    }
+    
+    .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-links li a {
+      display: block;
+      padding: 0.8rem 1.2rem;
+      background-color: var(--accent);
+      color: var(--bg-dark);
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    
+    .nav-links li a:hover {
+      background-color: var(--primary);
+    }
+    
+    .mobile-nav {
+      display: none;
+    }
+    
+    /* 🔁 Mobile optimization */
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+    
+      .mobile-nav {
+        display: block;
+      }
+    
+      .mobile-nav select {
+        padding: 0.6rem;
+        font-size: 1rem;
+        background-color: var(--accent);
+        color: var(--bg-dark);
+        border: none;
+        border-radius: 4px;
+      }
+    }
+  </style>
   <ul class="nav-links">
     <li><a href="#">Home</a></li>
     <li><a href="#">Features</a></li>
