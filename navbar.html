@@ -18,8 +18,8 @@
 
   <style>
     :root {
-      --bg-card: #fff;
-      --bg-light: #f2f2f2;
+      --bg-card: #ffffff;
+      --bg-light: #f7f7f7;
       --bg-dark: #222;
       --accent: #4caf50;
       --primary: #2196f3;
@@ -35,7 +35,6 @@
       font-family: sans-serif;
     }
 
-    /* Desktop Nav Links */
     .nav-links {
       display: flex;
       justify-content: center;
@@ -46,13 +45,13 @@
     }
 
     .nav-links li a {
-      display: inline-block;
       padding: 0.6rem 1.2rem;
       background-color: var(--accent);
       color: var(--bg-dark);
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
+      display: inline-block;
     }
 
     .nav-links li a:hover {
@@ -60,7 +59,6 @@
       color: white;
     }
 
-    /* Mobile Dropdown Styles */
     .mobile-nav {
       display: none;
       padding-top: 1rem;
@@ -91,12 +89,12 @@
     }
 
     .dropdown-menu li a {
-      display: block;
       padding: 0.6rem 1rem;
       text-decoration: none;
       color: var(--text);
       background-color: var(--bg-card);
       border-radius: 5px;
+      display: block;
     }
 
     .dropdown-menu li a:hover {
@@ -104,7 +102,6 @@
       color: var(--bg-dark);
     }
 
-    /* Responsive Breakpoint */
     @media (max-width: 600px) {
       .nav-links {
         display: none;
