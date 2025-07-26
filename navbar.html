@@ -2,32 +2,31 @@
   <style>
     .navbar {
       background-color: var(--bg-card);
-      border-bottom: 2px solid var(--accent);
       padding: 1rem;
       text-align: center;
+      border-bottom: 2px solid var(--accent);
     }
     
     .nav-links {
-      list-style: none;
       display: flex;
       justify-content: center;
       gap: 2rem;
-      margin: 0;
+      list-style: none;
       padding: 0;
+      margin: 0;
     }
     
-    .nav-links li a {
-      display: block;
-      padding: 0.8rem 1.2rem;
+    .nav-links a {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
       background-color: var(--accent);
       color: var(--bg-dark);
-      border-radius: 6px;
+      border-radius: 5px;
+      font-weight: 600;
       text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
     }
     
-    .nav-links li a:hover {
+    .nav-links a:hover {
       background-color: var(--primary);
     }
     
@@ -35,7 +34,7 @@
       display: none;
     }
     
-    /* 🔁 Mobile optimization */
+    /* ✅ Mobile dropdown takes over under 600px */
     @media (max-width: 600px) {
       .nav-links {
         display: none;
@@ -45,13 +44,20 @@
         display: block;
       }
     
-      .mobile-nav select {
+      .mobile-label {
+        color: var(--primary);
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+    
+      #mobile-menu {
         padding: 0.6rem;
         font-size: 1rem;
         background-color: var(--accent);
         color: var(--bg-dark);
+        border-radius: 5px;
         border: none;
-        border-radius: 4px;
+        appearance: none;
       }
     }
   </style>
@@ -62,8 +68,9 @@
   </ul>
 
   <div class="mobile-nav">
-    <select onchange="location = this.value;">
-      <option disabled selected>Menu</option>
+    <label for="mobile-menu" class="mobile-label">Menu:</label>
+    <select id="mobile-menu" onchange="location = this.value;">
+      <option disabled selected>Select</option>
       <option value="#">Home</option>
       <option value="#">Features</option>
       <option value="#">Contact</option>
