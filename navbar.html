@@ -20,19 +20,19 @@
     :root {
       --bg-card: #ffffff;
       --bg-light: #f7f7f7;
-      --bg-dark: #222;
+      --bg-dark: #222222;
       --accent: #4caf50;
       --primary: #2196f3;
-      --text: #333;
+      --text: #333333;
     }
 
     .responsive-nav {
       background-color: var(--bg-card);
       padding: 1rem;
       border-bottom: 2px solid var(--accent);
+      font-family: sans-serif;
       max-width: 800px;
       margin: auto;
-      font-family: sans-serif;
     }
 
     .nav-links {
@@ -54,6 +54,7 @@
       display: inline-block;
     }
 
+    /* Override hover behavior with identical values */
     .nav-links li a:hover {
       background-color: var(--accent);
       color: var(--bg-dark);
@@ -90,9 +91,9 @@
 
     .dropdown-menu li a {
       padding: 0.6rem 1rem;
-      text-decoration: none;
-      color: var(--text);
       background-color: var(--bg-card);
+      color: var(--text);
+      text-decoration: none;
       border-radius: 5px;
       display: block;
     }
@@ -106,7 +107,6 @@
       .nav-links {
         display: none;
       }
-
       .mobile-nav {
         display: block;
       }
