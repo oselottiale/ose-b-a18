@@ -123,5 +123,14 @@
       <option value="#">Features</option>
       <option value="#">Contact</option>
     </select>
+
+    <script>
+      const toggleBtn = document.querySelector('.dropdown-toggle');
+      const menu = document.querySelector('.dropdown-menu');
+      
+      toggleBtn.addEventListener('click', () => {
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+      });
+    </script>
   </div>
 </nav>
