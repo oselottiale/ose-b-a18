@@ -121,6 +121,20 @@
   </style>
 </head>
 <body>
+    <div id="navbar-placeholder"></div>
+    <div id="navbar-placeholder"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Navbar fetch failed:', error));
+  </script>
+
+
+
 
   <header>
     <img src="oseale-logo.png" alt="Oseale Logo" />
