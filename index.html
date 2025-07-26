@@ -106,6 +106,25 @@
       border-top: 1px solid var(--border);
     }
 
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+    
+    .wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    main {
+      flex: 1; /* This expands the main content to fill space */
+    }
+    
+
+    
+    
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 1.8rem;
@@ -128,15 +147,14 @@
     <section>
       <h2>About</h2>
       <p>
-        This project transforms Reddit stories into short-form videos using open-source tools like 
-        <a href="https://github.com/elebumm/RedditVideoMakerBot" target="_blank">RedditVideoMakerBot</a>.  
-        Customized and operated by Oseale to explore storytelling, voice automation, and creative content.
       </p>
     </section>
+<div class="wrapper">
+
 
   <footer>
     &copy; 2025 Oseale.
   </footer>
-
+</div>
 </body>
 </html>
